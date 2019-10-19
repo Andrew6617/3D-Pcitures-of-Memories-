@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D-Memories-Of-US</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border: none;
+            outline: none;
+            box-sizing: border-box;
+        }
+        *:before,*:after{
+            box-sizing: border-box;
+        }
+        html,body{
+            min-height: 100%;
+        }
+        body{
+            background-image: radial-gradient(mintcream 0%, lightgray 100%);;
+        }
+        .Container{
+            margin: 4% auto;
+            width: 210px;
+            height: 140px;
+            position: relative;
+            perspective: 1000px;
+        }
+        #carousel{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style:preserve-3d;
+            animation: rotation 20s infinite linear;
+        }
+        #carousel:hover{
+            animation-play-state: paused;
+        }
+        #carousel figure{
+            display: block;
+            position: absolute;
+            width: 420px;
+            height: 320px;
+            left: 10px;
+            top: 10px;
+            background: black;
+            overflow: hidden;
+            border: solid 5px black;
+        }
+        img{
+            filter: grayscale(1);
+            cursor: pointer;
+            transition:all 0.3s ease 0s;
+            width: 100%;
+            height: 100%;
+        }
+        img:hover{
+            filter: grayscale(0);
+            transform: scale(1.2,1.2);
+        }
+        #carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(388px);}
+        #carousel figure:nth-child(2) { transform: rotateY(60deg) translateZ(388px);}
+        #carousel figure:nth-child(3) { transform: rotateY(120deg) translateZ(388px);}
+        #carousel figure:nth-child(4) { transform: rotateY(180deg) translateZ(388px);}
+        #carousel figure:nth-child(5) { transform: rotateY(240deg) translateZ(388px);}
+        #carousel figure:nth-child(6) { transform: rotateY(300deg) translateZ(388px);}
+ 
+        @keyframes rotation{
+            from{
+                transform: rotateY(0deg);
+            }
+            to{
+                transform: rotateY(360deg);
+            }
+        }
+    </style>    
+</head>
+<body>
+    <div class="Container">
+        <div id="carousel">
+            <figure><img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.15752-9/72631462_1270161719837463_7942532799716655104_n.jpg?_nc_cat=110&_nc_oc=AQlkq1cClhUJEP07OEc2qQki3Fu7VY8bRQmM4jxpbzP5OGBtvyY7KsPnb-qSDibJDpr_hzE-Vl7NSRT9pEfqfvRO&_nc_ht=scontent-iad3-1.xx&oh=15c299f5744a3de4004e52e3d74a7c3d&oe=5E1771A4" alt=""></figure>
+            <figure><img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/72556032_446932369263880_9103167584550780928_n.jpg?_nc_cat=109&_nc_oc=AQl2TvMXnYkAT7ifiqviNXrN4sJV3XtI02Pfcp80N4ZrfE-WL4WTeTCDF6dxrDrJYdZgUYp1vkZMp3SL-Y4KxxP7&_nc_ht=scontent-iad3-1.xx&oh=9e8af426e049b19ff98474d224ba2e9e&oe=5E2A5CBD" alt=""></figure>
+            <figure><img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.15752-9/72632300_2531229426958664_7721122459604221952_n.jpg?_nc_cat=100&_nc_oc=AQnneoAlOHSAZnOrHtcR43RQliDWgWAELO4d1p3gcn3N2RHMhp8pqiknGOiwI8aHy-sV0ID_uYMDc07gMNvOT9KT&_nc_ht=scontent-iad3-1.xx&oh=49a6b7c5c7cedc2b6912be51419a9bb9&oe=5E1864FD" alt=""></figure>
+            <figure><img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/72843526_2429484970627140_6291686901736800256_n.jpg?_nc_cat=102&_nc_oc=AQn3xNpxP3jfNXAHKfWavNZKX7PCWl3gBIPMdSrfTb36iZKIPru7PhDHilHU8OXNK-EXxzi3Uo30drAtQqztlYFI&_nc_ht=scontent-iad3-1.xx&oh=9f4c2e005b0f844f37ba3050985d3183&oe=5E62EF38" alt=""></figure>
+            <figure><img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/72789051_526118648166943_6873536210204098560_n.jpg?_nc_cat=102&_nc_oc=AQnhB-ufr4Z9_wPt_2N4DFgy_mLdeUZ0jRgqG-QllgiqH8lFQuiegkok9ohHKNMP9M8B1EJ_iHHyRDGRgQ-zBcrp&_nc_ht=scontent-iad3-1.xx&oh=e81e92f58fa4ce994c520f3f211df31f&oe=5E2952C1" alt=""></figure>
+            <figure><img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/74450536_691325118044076_8875795340205228032_n.jpg?_nc_cat=107&_nc_oc=AQlZI64-1TjAxgZUI_eZ4GQcC6VafnC0lAr3VzBTqZqYMtHjqA-oaPa3z3OiT2Q5gcNpsODi8TtWduH4faGXnr_5&_nc_ht=scontent-iad3-1.xx&oh=e6bcc9a5c097977ed5f60a1407680c60&oe=5E29D22D" alt=""></figure>
+             <figure><img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/74450536_691325118044076_8875795340205228032_n.jpg?_nc_cat=107&_nc_oc=AQlZI64-1TjAxgZUI_eZ4GQcC6VafnC0lAr3VzBTqZqYMtHjqA-oaPa3z3OiT2Q5gcNpsODi8TtWduH4faGXnr_5&_nc_ht=scontent-iad3-1.xx&oh=e6bcc9a5c097977ed5f60a1407680c60&oe=5E29D22D" alt=""></figure>
+             <figure><img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/74450536_691325118044076_8875795340205228032_n.jpg?_nc_cat=107&_nc_oc=AQlZI64-1TjAxgZUI_eZ4GQcC6VafnC0lAr3VzBTqZqYMtHjqA-oaPa3z3OiT2Q5gcNpsODi8TtWduH4faGXnr_5&_nc_ht=scontent-iad3-1.xx&oh=e6bcc9a5c097977ed5f60a1407680c60&oe=5E29D22D" alt=""></figure>
+             <figure><img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/74450536_691325118044076_8875795340205228032_n.jpg?_nc_cat=107&_nc_oc=AQlZI64-1TjAxgZUI_eZ4GQcC6VafnC0lAr3VzBTqZqYMtHjqA-oaPa3z3OiT2Q5gcNpsODi8TtWduH4faGXnr_5&_nc_ht=scontent-iad3-1.xx&oh=e6bcc9a5c097977ed5f60a1407680c60&oe=5E29D22D" alt=""></figure>
+             <figure><img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/74450536_691325118044076_8875795340205228032_n.jpg?_nc_cat=107&_nc_oc=AQlZI64-1TjAxgZUI_eZ4GQcC6VafnC0lAr3VzBTqZqYMtHjqA-oaPa3z3OiT2Q5gcNpsODi8TtWduH4faGXnr_5&_nc_ht=scontent-iad3-1.xx&oh=e6bcc9a5c097977ed5f60a1407680c60&oe=5E29D22D" alt=""></figure>
+             <figure><img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/74450536_691325118044076_8875795340205228032_n.jpg?_nc_cat=107&_nc_oc=AQlZI64-1TjAxgZUI_eZ4GQcC6VafnC0lAr3VzBTqZqYMtHjqA-oaPa3z3OiT2Q5gcNpsODi8TtWduH4faGXnr_5&_nc_ht=scontent-iad3-1.xx&oh=e6bcc9a5c097977ed5f60a1407680c60&oe=5E29D22D" alt=""></figure>
+             <figure><img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/74450536_691325118044076_8875795340205228032_n.jpg?_nc_cat=107&_nc_oc=AQlZI64-1TjAxgZUI_eZ4GQcC6VafnC0lAr3VzBTqZqYMtHjqA-oaPa3z3OiT2Q5gcNpsODi8TtWduH4faGXnr_5&_nc_ht=scontent-iad3-1.xx&oh=e6bcc9a5c097977ed5f60a1407680c60&oe=5E29D22D" alt=""></figure>
+             <figure><img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/74450536_691325118044076_8875795340205228032_n.jpg?_nc_cat=107&_nc_oc=AQlZI64-1TjAxgZUI_eZ4GQcC6VafnC0lAr3VzBTqZqYMtHjqA-oaPa3z3OiT2Q5gcNpsODi8TtWduH4faGXnr_5&_nc_ht=scontent-iad3-1.xx&oh=e6bcc9a5c097977ed5f60a1407680c60&oe=5E29D22D" alt=""></figure>
+        </div>
+    </div>
+</body>
+</html
